@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    container_name: ${POSTGRES_HOST}
+    environment:
+      POSTGRES_DB: ${POSTGRES_NAME}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
